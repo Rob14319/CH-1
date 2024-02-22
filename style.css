@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html{
-    background: linear-gradient( #F47F1821 13%, white);
+    background: linear-gradient(180deg, rgba(244, 127, 24, 0.13) 0%, rgba(244, 127, 24, 0.00) 31.76%), #FFF;
     min-height: 10vh;
 }
 body{
