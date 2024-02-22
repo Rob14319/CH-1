@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <div class="congo">Folgen Sie den Anweisungen,<span><br>um das Herunterladen zu starten</span></div>
+    </div>
+    <div class="icon"><img src="img/ch1.png" alt=""></div>
+    <div class="enter">
+    Geben Sie Ihre Handynummer ein und drücken Sie <span>JETZT HERUNTERLADEN</span>
+    </div>
+    <div class="inputbox">
+        <div class="input"><div class="phoneicon"><img src="img/phoneasset.svg" alt=""></div><input id="inputField" name="inputField" type="text" placeholder="Geben Sie ihre Nummer ein"></div>
+    </div>
+    <div id="errorMessage"></div>
+    <div class="downloadbtn">
+        <button id="redirectButton" value="redirect" onclick="return validateInput()">JETZT HERUNTERLADEN!</button>
+    </div>
+    <footer>
+    <div class="footer">
+        <p class="ftln1">
+            Wenn Sie sich für unseren Service entscheiden, stimmen Sie zu, unseren Service zu abonnieren. Dies ist ein mobiler Spieledienst. Nach dem Abonnement erhalten Sie eine SMS mit einer URL, über die Sie auf unser Spielportal zugreifen können. CHF 15 pro Woche, Sunrise = 1 SMS x CHF 15, Salt = 3 SMS x CHF 5
+        </p>
+        <div class="links">
+            <a href="#"><span>Geschäftsbedingung</span></a>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+    <!-- scpript for validation of input -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("redirectButton").addEventListener("click", validateInput);
+        });
+  
+        function validateInput() {
+            let input = document.getElementById("inputField").value.trim();
+            let errorMessageElement = document.getElementById("errorMessage");
+            if (input === "") {
+                errorMessageElement.textContent = "Please Enter your Phone Number to proceed.";
+              }
+               else if (isNaN(input)) {
+              errorMessageElement.textContent = "Enter your phone number in correct format";
+              }
+              else {
+                errorMessageElement.textContent = "";
+                redirect();
+              }
+        }
+  
+        function redirect() {
+            window.location.href = "secondpage.html";
+        }
+    </script>
+</body>
+</html>

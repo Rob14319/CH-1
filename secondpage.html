@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <div class="congo2">FAntworten <span>Sie</span> mit JA auf <span>595</span> <br>um Ihre Games jetzt zu antsperren </div>
+    </div>
+    <div class="button2">
+        <button id="redirectButton" value="redirect" onclick="return validateInput()">Antworten Sie mit JA auf 595 um Ihre Games jetzt zu antsperren </button>
+    </div>
+    <div class="ges">Geschäftsbedingung</div>
+    
+    <div class="footersecond">
+        <p class="ftln1">
+            PlayZone1 is a subscription service where the user gets access to games. You can play/download all the games provided for the duration of the subscription. 
+            Enter your number and answer YES (for Salt and Sunrise) or START ABO (for Swisscom). 
+            If you want to end the subscription, send an SMS with the keyword: STOP YES to 522 or contact us on our hotline: +41445816440 or by email gomobee.ch@silverlines.info 
+            The subscription costs 15 CHF per week (3 SMS /week for Salt and Swisscom; 1 SMS/week for Sunrise).
+        </p>
+        <div class="links">
+            <a href="#"><span>Geschäftsbedingung</span></a>
+      </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("redirectButton").addEventListener("click", validateInput);
+        });
+  
+        function validateInput() {
+            let input = document.getElementById("inputField").value.trim();
+            let errorMessageElement = document.getElementById("errorMessage");
+            if (input === "") {
+                errorMessageElement.textContent = "Please Enter your Phone Number to proceed.";
+              }
+               else if (isNaN(input)) {
+              errorMessageElement.textContent = "Enter your phone number in correct format";
+              }
+              else {
+                errorMessageElement.textContent = "";
+                redirect();
+              }
+        }
+  
+        function redirect() {
+            window.location.href = "secondpage.html";
+        }
+    </script>
+</body>
+</html>
