@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 html{
+    background: linear-gradient( #F47F1821 13%, white);
     min-height: 10vh;
 }
 body{
     height: 100vh;
-    background-image: url('img/texture.png');
 }
 .heading{
     display: flex;
@@ -22,7 +22,7 @@ body{
     text-align: center;
     font-size: 1.0625rem;
     font-size: clamp(1.0625rem, 0.8375rem + 1.125vw, 2.1875rem);
-    font-weight: 600;
+    font-weight: 700;
 }
 .heading span{
     color: #EA491C;
@@ -89,8 +89,8 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #F47F18, #EB4A1D );
-    width: 1.7rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2rem;
     border-radius: 10px;
     padding: 5px;
 }
@@ -171,6 +171,7 @@ body{
 .ges{
     color: #A4A4A4;
     margin-top: 2rem;
+    margin-bottom: 5rem;
     display: flex;
     align-items: end;
     text-align: center;
@@ -180,26 +181,25 @@ body{
 }
 footer{
     margin-top: 5vh;
+    background: white;
 }
 .footer{
     width: 100vw;
-    position: absolute;
-    bottom: -20rem;
     border-top: .5px solid black;
-    margin-top: 15vh;
+    margin-top: 22vh;
     padding-top: 5vh;
     padding-bottom: 2rem;
     text-align: center;
     justify-content: center;
     font-size: 0.625rem;
     font-size: clamp(0.625rem, 0.6rem + 0.125vw, 0.75rem);
-    font-weight: 200;
+    font-weight: 400;
 }
 .footersecond{
     position: absolute;
-    bottom: -8rem;
+    bottom: 0;
     border-top: .5px solid black;
-    margin-top: 22vh;
+    margin-top: 39vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
     text-align: center;
@@ -225,6 +225,8 @@ ul li{
     text-decoration: none;
 }
 .links{
+    font-weight: 600;
+    margin-top: 1rem;
     justify-content: center;
     text-align: center;
 }
@@ -248,5 +250,11 @@ ul li{
     .downloadbtn{
         margin-right: 2rem;
         margin-left: 2rem;
+    }
+    .footersecond{
+        position: relative;
+    }
+    body{
+        height: auto;
     }
 }
