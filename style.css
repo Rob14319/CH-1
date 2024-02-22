@@ -196,6 +196,7 @@ footer{
     font-weight: 200;
 }
 .footersecond{
+    width:100vw;
     position: absolute;
     bottom: 0;
     border-top: .5px solid black;
