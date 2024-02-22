@@ -184,7 +184,7 @@ footer{
 .footer{
     width: 100vw;
     position: absolute;
-    bottom: -8rem;
+    bottom: -20rem;
     border-top: .5px solid black;
     margin-top: 15vh;
     padding-top: 5vh;
